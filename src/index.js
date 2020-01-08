@@ -1,10 +1,10 @@
-import header from "./header.component";
-import article from "./article.component";
-import tabs from "./tabs.component";
-import menu from "./menu.tab";
-import contacts from "./contacts.tab";
+import header from './header.component';
+import article from './article.component';
+import tabs from './tabs.component';
+import menu from './menu.tab';
+import contacts from './contacts.tab';
 
-const content = document.getElementById("content");
+const content = document.getElementById('content');
 const docTabs = tabs();
 const menuTab = menu();
 const contactsTab = contacts();
@@ -15,19 +15,18 @@ content.appendChild(docTabs);
 docTabs.appendChild(menuTab);
 docTabs.appendChild(contactsTab);
 
-const domTabs = [...docTabs.querySelectorAll(".tab")];
+const domTabs = [...docTabs.querySelectorAll('.tab')];
 
-const ShowTab = target => {
-    domTabs.forEach(el => el.style.display = "none")
-    document.getElementById(target).style.display = "block"
-}
+const ShowTab = (target) => {
+  // eslint-disable-next-line no-param-reassign
+  domTabs.forEach((el) => { el.style.display = 'none'; });
+  document.getElementById(target).style.display = 'block';
+};
 
-[...docTabs.querySelector('.tabs-nav').querySelectorAll('a')].forEach(el => {
-    el.addEventListener('click', e => {
-        ShowTab(e.target.href.split('#').pop())
-    }) 
-})
+[...docTabs.querySelector('.tabs-nav').querySelectorAll('a')].forEach((el) => {
+  el.addEventListener('click', (e) => {
+    ShowTab(e.target.href.split('#').pop());
+  });
+});
 
-ShowTab('contacts')
-
-console.log([...docTabs.querySelector('.tabs-nav').querySelectorAll('a')]);
+ShowTab('contacts');

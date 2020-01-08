@@ -1,8 +1,8 @@
 export default function menu() {
-  const menu = document.createElement("div");
-  menu.classList.add('tab')
-  menu.id = "menu";
-  const menuTable = document.createElement("table");
+  const menuEl = document.createElement('div');
+  menuEl.classList.add('tab');
+  menuEl.id = 'menuEl';
+  const menuTable = document.createElement('table');
   menuTable.innerHTML = `
         <thead>
             <tr>
@@ -24,11 +24,11 @@ export default function menu() {
                 <td>20$</td>
             </tr>
             <tr>
-                <td>Breakfest menu</td>
+                <td>Breakfest menuEl</td>
                 <td>40$</td>
             </tr>
         </tbody>
     `;
-  menu.appendChild(menuTable);
-  return menu;
+  menuEl.appendChild(menuTable);
+  return menuEl;
 }

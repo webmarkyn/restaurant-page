@@ -1,10 +1,10 @@
 export default function article() {
-  const article = document.createElement("article");
-  article.style.cssText = `
+  const articleEl = document.createElement('articleEl');
+  articleEl.style.cssText = `
         display: flex;
         justify-content: center;
     `;
-  const p = document.createElement("p");
+  const p = document.createElement('p');
   p.innerText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
     aliquid eligendi, cum, aut minus tenetur facilis asperiores quis
     itaque ex hic neque debitis aperiam sed quibusdam sequi eum aspernatur
@@ -33,6 +33,6 @@ export default function article() {
         font-size: 17px;
         text-align: center;
       `;
-  article.appendChild(p);
-  return article;
+  articleEl.appendChild(p);
+  return articleEl;
 }
