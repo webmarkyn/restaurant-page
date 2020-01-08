@@ -1,7 +1,7 @@
 export default function menu() {
   const menuEl = document.createElement('div');
   menuEl.classList.add('tab');
-  menuEl.id = 'menuEl';
+  menuEl.id = 'menu';
   const menuTable = document.createElement('table');
   menuTable.innerHTML = `
         <thead>

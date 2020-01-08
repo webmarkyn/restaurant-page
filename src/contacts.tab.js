@@ -1,7 +1,7 @@
 export default function contacts() {
   const contactsEl = document.createElement('div');
   contactsEl.classList.add('tab');
-  contactsEl.id = 'contactsEl';
+  contactsEl.id = 'contacts';
   const info = document.createElement('p');
   info.innerText = `
         Book a table: +17777777777
