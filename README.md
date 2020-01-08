@@ -1,1 +1,1 @@
-# restoraunt-page
+# restaurant-page
