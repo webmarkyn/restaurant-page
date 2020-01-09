@@ -13,7 +13,7 @@ content.appendChild(docTabs);
 const currentTab = document.getElementById('currentTab');
 
 const ShowTab = (target) => {
-  currentTab.innerHTML = allTabs.filter((el) => el.id === target).shift().innerHTML;
+  currentTab.innerHTML = allTabs.filter(el => el.id === target).shift().innerHTML;
 };
 
 [...docTabs.querySelector('.tabs-nav').querySelectorAll('a')].forEach((el) => {
