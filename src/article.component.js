@@ -1,9 +1,5 @@
 export default function article() {
-  const articleEl = document.createElement('articleEl');
-  articleEl.style.cssText = `
-        display: flex;
-        justify-content: center;
-    `;
+  const articleEl = document.createElement('article');
   const p = document.createElement('p');
   p.innerText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
     aliquid eligendi, cum, aut minus tenetur facilis asperiores quis
@@ -28,11 +24,6 @@ export default function article() {
     consequuntur, doloremque aspernatur omnis maxime cumque magni. Debitis
     corporis deleniti iusto aspernatur aperiam nesciunt, mollitia alias
     nisi provident obcaecati?`;
-  p.style.cssText = `
-        max-width: 600px;
-        font-size: 17px;
-        text-align: center;
-      `;
   articleEl.appendChild(p);
   return articleEl;
 }

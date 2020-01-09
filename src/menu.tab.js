@@ -24,7 +24,7 @@ export default function menu() {
                 <td>20$</td>
             </tr>
             <tr>
-                <td>Breakfest menuEl</td>
+                <td>Breakfest menu</td>
                 <td>40$</td>
             </tr>
         </tbody>

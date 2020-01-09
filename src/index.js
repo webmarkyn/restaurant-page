@@ -6,25 +6,19 @@ import contacts from './contacts.tab';
 
 const content = document.getElementById('content');
 const docTabs = tabs();
-const menuTab = menu();
-const contactsTab = contacts();
+const allTabs = [menu(), contacts()];
 content.appendChild(header());
 content.appendChild(article());
 content.appendChild(docTabs);
-
-docTabs.appendChild(menuTab);
-docTabs.appendChild(contactsTab);
-
-const domTabs = [...docTabs.querySelectorAll('.tab')];
+const currentTab = document.getElementById('currentTab');
 
 const ShowTab = (target) => {
-  // eslint-disable-next-line no-param-reassign
-  domTabs.forEach((el) => { el.style.display = 'none'; });
-  document.getElementById(target).style.display = 'block';
+  currentTab.innerHTML = allTabs.filter((el) => el.id === target).shift().innerHTML;
 };
 
 [...docTabs.querySelector('.tabs-nav').querySelectorAll('a')].forEach((el) => {
   el.addEventListener('click', (e) => {
+    e.preventDefault();
     ShowTab(e.target.href.split('#').pop());
   });
 });
